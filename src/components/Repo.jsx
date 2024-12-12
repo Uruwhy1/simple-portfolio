@@ -1,7 +1,14 @@
 const Repo = ({ repo }) => {
   const cleanName = (name) => {
-    let newName = name.split("-").slice(1);
-    return newName.join(" ");
+    let newName = name
+      .split("-")
+      .slice(1, 2)
+      .join(" ")
+      .replace(/([A-Z])/g, " $1")
+      .trim()
+      .replace(/\s+/g, " ");
+
+    return newName;
   };
 
   return (
