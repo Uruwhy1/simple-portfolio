@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+#root {
+  width: 100vw;
+  min-height: 100vh;
+
+  background-color: var(--page-bg);
+  padding: var(--page-padding);
+
+  font-family: "Montserrat", system-ui, -apple-system;
+
+  display: flex;
+}
+
+main {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  border: var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* header styling */
+
+header {
+  align-self: center;
+
+  display: flex;
+  font-weight: 500;
+  gap: 1rem;
+}
+
+header a {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+
+  transition: color 0.15s;
+  &&:hover {
+    color: skyblue;
+  }
+}
+
+/* repos styling */
+
+.portfolio-container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--portfolio-gap);
+}
+
+.portfolio-container section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 0.5rem;
+  width: 100%;
+
+  > h2 {
+    align-self: start;
+    text-transform: uppercase;
+    font-weight: 1000;
+  }
+}
+
+.repos-grid {
+  width: 100%;
+
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 25%));
+  gap: 2rem;
+}
+
+.repo-card {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+
+  > h3 {
+    text-transform: capitalize;
+  }
+
+  transition: all 0.3s;
+  &&:hover {
+    box-shadow: var(--shadow-link);
+  }
+}
