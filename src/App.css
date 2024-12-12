@@ -78,7 +78,7 @@ header a {
 
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 25%));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 25%));
   gap: 2rem;
 }
 
@@ -86,6 +86,8 @@ header a {
   padding: 0.5rem;
   text-decoration: none;
   color: inherit;
+
+  text-wrap: pretty;
 
   > h3 {
     text-transform: capitalize;
