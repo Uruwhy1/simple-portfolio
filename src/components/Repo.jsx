@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Repo = ({ repo }) => {
   const cleanName = (name) => {
     let newName = name
@@ -22,6 +24,14 @@ const Repo = ({ repo }) => {
       <p>{repo.description || "No description"}</p>
     </a>
   );
+};
+
+Repo.propTypes = {
+  repo: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    htmlUrl: PropTypes.string.isRequired,
+    description: PropTypes.string,
+  }).isRequired,
 };
 
 export default Repo;
