@@ -99,3 +99,18 @@ header a {
     box-shadow: var(--shadow-link);
   }
 }
+
+.live {
+  position: relative;
+
+  &&:after {
+    position: absolute;
+    content: "LIVE";
+    left: calc(85% + 0.5rem);
+    top: 0.5rem;
+
+    color: rgb(212, 0, 0);
+
+    font-weight: 600;
+  }
+}

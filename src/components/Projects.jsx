@@ -14,8 +14,8 @@ const GitHubPortfolio = () => {
         setLoading(true);
         const fetchedRepos = await fetchGitHubRepos();
 
-        const mainReposList = fetchedRepos.filter((repo) =>
-          repo.name.startsWith("pfm")
+        const mainReposList = fetchedRepos.filter(
+          (repo) => repo.name.startsWith("pfm") || repo.name.startsWith("pfml")
         );
 
         const otherReposList = fetchedRepos.filter(

@@ -1,6 +1,10 @@
 import PropTypes from "prop-types";
 
 const Repo = ({ repo }) => {
+  const isLive = repo.name.startsWith("pfml");
+
+  console.log(repo.name);
+
   const cleanName = (name) => {
     let newName = name
       .split("-")
@@ -18,7 +22,7 @@ const Repo = ({ repo }) => {
       href={repo.htmlUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="card repo-card"
+      className={`card repo-card ${isLive && "live"}`}
     >
       <h3>{cleanName(repo.name)}</h3>
       <p>{repo.description || "No description"}</p>
