@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const Repo = ({ repo }) => {
-  const isLive = repo.name.startsWith("pfml");
+  const isLive = repo.name.startsWith("pfml") || repo.name.startsWith("pfl");
 
   console.log(repo.name);
 
